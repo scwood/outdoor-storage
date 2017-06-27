@@ -50,6 +50,7 @@ function doTransform(req, res) {
       // (3) Unit is not being rented
       result = '';
     }
+    result = result.replace(',', '');
     template = template.replace(number, result);
   });
 
