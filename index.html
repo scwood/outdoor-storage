@@ -3,11 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge"> <title>Inventory Transform</title>
-    <link rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
-      integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
-      crossorigin="anonymous">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Inventory Transform</title>
+    <link rel="stylesheet" href="/bootstrap.min.css">
     <style>
       body {
         padding-top: 4rem;
@@ -43,22 +41,23 @@
           </li>
         </ul>
       </p>
-      <form action="/transform" method="post" encType="multipart/form-data" target="_blank">
-        <div class="form-group">
-          <label><strong>Unit export file</strong></label>
-          <input type="file" name="unitFile" class="form-control-file">
-        </div>
-        <div class="form-group">
-          <label><strong>Customer export file</strong></label>
-          <input type="file" name="customerFile" class="form-control-file">
-        </div>
-        <div class="form-group">
-          <label><strong>Template file</strong></label>
-          <input type="file" name="templateFile" class="form-control-file">
-        </div>
-        <hr>
-        <button role="button" type="submit" class="btn btn-success">Submit</button>
-      </form>
+      <div class="form-group">
+        <label><strong>Unit export file</strong></label>
+        <input type="file" id="unitFile" class="form-control-file">
+      </div>
+      <div class="form-group">
+        <label><strong>Customer export file</strong></label>
+        <input type="file" id="customerFile" class="form-control-file">
+      </div>
+      <div class="form-group">
+        <label><strong>Template file</strong></label>
+        <input type="file" id="templateFile" class="form-control-file">
+      </div>
+      <hr>
+      <button role="button" class="btn btn-success" onclick="createTransformedFile()">Submit</button>
     </div>
+    <script src="/promise-6.1.0.min.js"></script>
+    <script src="/papaparse.min.js"></script>
+    <script src="/index.js"></script>
   </body>
 </html>
